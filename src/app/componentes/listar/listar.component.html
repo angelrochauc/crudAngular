@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-header">
+        Pasaje
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+
+                    <th>Correo</th>
+                    <th>Destino</th>
+                    <th>Hora de Vuelo</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pasaje of Pasajes; let iControl=index">
+                    <td>{{pasaje.id}}</td>
+                    <td>{{pasaje.nombre}}</td>
+                    <td>{{pasaje.correo}}</td>
+                    <td>{{pasaje.destino}}</td>
+                    <td>{{pasaje.hora}}</td>
+                    <td>{{pasaje.fecha}}</td>
+                    <td>
+                        <a  routerLink="/Editar/{{pasaje.id}}"> <img src="https://cdn-icons-png.flaticon.com/512/32/32355.png" height="20" width="20"></a>
+                        <a routerLink="/Editarr/{{pasaje.id}}"> <img src="https://png.pngtree.com/png-clipart/20191027/ourlarge/pngtree-view-icon-png-image_1869829.jpg" height="20" width="20"></a>
+                        <a (click)="borrarRegistro(pasaje.id, iControl)" role="button"> <img src="https://cdn-icons-png.flaticon.com/512/1799/1799391.png" height="20" width="20"></a> 
+                    </td>
+                    
+                </tr>
+            
+            </tbody>
+        </table>
+        
+    </div>
+   
+</div>

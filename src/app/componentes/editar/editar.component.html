@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-header">
+        Editar Pasaje
+    </div>
+    <div class="card-body">
+
+        <form [formGroup]="formularioDePasaje" (ngSubmit)="enviarDatos()">
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre Completo:</label>
+                <input type="text" formControlName="nombre" class="form-control" name="" id="" aria-describedby="helpId"   placeholder="Escribe tu Nombre">
+            </div>
+           
+            <div class="mb-3">
+                <label for="" class="form-label">Correo:</label>
+                <input type="email" formControlName="correo" class="form-control" name="" id="" aria-describedby="helpId"  placeholder="Escribe tu Correo">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Destino:</label>
+                <input type="" formControlName="destino" class="form-control"  id="emails" list="destino" required size="64"  placeholder="Seleccione tu Destino">
+                
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Hora de Vuelo:</label>
+                <input type="text" formControlName="hora" class="form-control"  id="emailss" list="hora" required size="64"  placeholder="seleccione Hora">
+               </div>
+               <div class="mb-3">
+                <label for="" class="form-label">Fecha de Vuelo:</label>
+                <input type="date" formControlName="fecha" class="form-control"  list="fecha" required size="64"  placeholder="seleccione fecha">
+               </div>
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-success">Guardar</button>
+                
+                
+                
+            </div>
+        </form>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,38 @@
+<div class="card">
+    <div class="card-header">
+        Agregar Empleado
+    </div>
+    <div class="card-body">
+
+        <form [formGroup]="formularioDeEmpleado" (ngSubmit)="enviarDatosE()">
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre Completo:</label>
+                <input type="text" class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId"   placeholder="Escribe tu Nombre">
+            </div>
+           
+            <div class="mb-3">
+                <label for="" class="form-label">Correo:</label>
+                <input type="email" class="form-control" name="" formControlName="correo" id="" aria-describedby="helpId"  placeholder="Escribe tu Correo">
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Fecha de Ingreso:</label>
+                <input type="date" class="form-control" name="" formControlName="fecha" id="" aria-describedby="helpId"  placeholder="fecha de ingreso">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Salario:</label>
+                <input type="number" class="form-control" name="" formControlName="salario" id="" aria-describedby="helpId"  placeholder="salario">
+            </div>
+           
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" ><img src="https://cdn-icons-png.flaticon.com/512/51/51862.png" width="20" height="20"></button> 
+                <button type="submit"><img src="https://w7.pngwing.com/pngs/465/487/png-transparent-computer-icons-check-mark-symbol-cancel-button-miscellaneous-angle-internet.png" width="20" height="20"></button>
+                
+                
+            </div>
+        </form>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-header">
+        Editar Empelado
+    </div>
+    <div class="card-body">
+       
+        <form [formGroup]="formularioDeEmpleado" (ngSubmit)="enviarDatosE()">
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre Completo:</label>
+                <input type="text" formControlName="nombre" class="form-control" name="" id="" aria-describedby="helpId"  required placeholder="Escribe tu Nombre">
+            </div>
+           
+            <div class="mb-3">
+                <label for="" class="form-label">Correo:</label>
+                <input type="email" formControlName="correo" class="form-control" name="" id="" aria-describedby="helpId" required placeholder="Escribe tu Correo">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Fecha de Ingreso:</label>
+                <input type="text" formControlName="fecha" class="form-control" name="" id="" aria-describedby="helpId" required  placeholder="Ingresa la fecha">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Salario:</label>
+                <input type="text" formControlName="salario" class="form-control" name="" id="" aria-describedby="helpId" required  placeholder="Ingresa Salario">
+            </div>
+            
+          
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-success">Guardar</button>
+                
+                
+            </div>
+        </form>
+
+
+    </div>
+
+</div>

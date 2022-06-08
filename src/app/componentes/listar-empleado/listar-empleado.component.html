@@ -1,0 +1,38 @@
+<div class="card">
+    <div class="card-header">
+        Empleado
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre Completo</th>
+                    <th>Correo</th>
+                    
+                    <th>Salario</th>
+                    <th>Fecha de Ingreso</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let empleado of Empleados; let iControl=index">
+                    <td>{{empleado.id}}</td>
+                    <td>{{empleado.nombre}}</td>
+                    <td>{{empleado.correo}}</td>
+                    <td>{{empleado.salario}}</td>
+                    <td>{{empleado.fecha}}</td>
+                    <td>
+                        <a  (click)="borrarRegistroE(empleado.id, iControl)" role="button">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1799/1799391.png" height="20" width="20">
+                      </a> 
+                    </td>
+                    
+                </tr>
+            
+            </tbody>
+        </table>
+        
+    </div>
+   
+</div>

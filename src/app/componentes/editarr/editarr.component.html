@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-header">
+        Ticket de Vuelo
+       </div>
+    <div class="card-body">
+
+        <form [formGroup]="formularioPasaje" (ngSubmit)="enviarDatos2()">
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre Completo:</label>
+                <input type="text" formControlName="nombre" class="form-control" name="" id="" aria-describedby="helpId" readonly  placeholder="Escribe tu Nombre">
+            </div>
+           
+            <div class="mb-3">
+                <label for="" class="form-label">Correo:</label>
+                <input type="email" formControlName="correo" class="form-control" name="" id="" aria-describedby="helpId" readonly placeholder="Escribe tu Correo">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Destino:</label>
+                <input type="" formControlName="destino" class="form-control"  id="emails" list="destino" required size="64" readonly placeholder="Seleccione tu Destino">
+                
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Hora de Vuelo:</label>
+                <input type="text" formControlName="hora" class="form-control"  id="emailss" list="hora" required size="64" readonly placeholder="seleccione Hora">
+               </div>
+               <div class="mb-3">
+                <label for="" class="form-label">Fecha Vuelo:</label>
+                <input type="date" formControlName="fecha" class="form-control"  id="emailss" list="fecha" required size="64" readonly placeholder="seleccione Hora">
+               </div>
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" ><img height="20" width="20" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEX///8AAADs7Ozx8fEfHx/e3t57e3tLS0u2trZeXl7T09P4+PgkJCQ3NzepqamOjo48PDzIyMgMDAyBgYFubm6+vr7h4eGXl5cZGRnGxsZjY2OUlJRERERRUVEiIiKJiYkxMTFhYWGvr6+jo6MqKipqamoRZgDqAAAEgUlEQVR4nO3dWVvqMBSF4VCoA3UoCAXEARH+/188R72w7Oxik+zSBc/6bhXb16khlMQ5xhhjLKF8fgPRPO+EN3wc4DRdFObA/K5v1WGboTEw61vktaxshfd9g5TGlsB53xq1laHwuW+M3o0ZsED8Jf3qwUo4HPVNaWp98cLB+8ULBzNz4Z3Sbvr78elO+4zQ6t9S8QVrx/ru1VqoDpferb+nqxpBnsyLIJYGI7i6MNM+4claWL8Ay48Vr4J4r55TUFhC524F8S15BIcmdDNBTB7BwQnrf/g/TdKOhyd0C0mcJx0PUOi2kpg0gkMU+s93FgnHgxS6iSQ+xR8PU+hySYw/NqjQVXLyKHoEhyp0mXzieh05QQUrdEUpiGXcCA5X6JwcpE6jiMhCfwQXMyMOLawf/KeIERy20HmvN4SP4MCF7lMSt6HHQxe6G0kMHcHBCw9mPb4LnIPDF7qxJIadxxkIXbUUxNuQ451eeGSuransTRBfA+bgQoS7j9v0Puozhq3PUg5S79sTQ4T2tT7N4lo8sv1TjTMR+q8Ctr4uno3QXR0+tLw8oZxmbDtEPSOhmGa8shJ2ea/NKEzoHjoRdnknQ/AFtj5INRMWHb6EGv5sr3bRMBP6I1+zIiZBOxG6VUd3hcXcitCN0BWr9aN1623UtFJHQqAoVKIQLAqVKASLQiUKwaJQiUKwKFSiECwKlSgEi0IlCsGiUIlCsChUohAsCpUoBItCJQrBolCJQrAoVKIQLAqVKASLQiUKwaJQiUKwKFSiECwKlSgEi0IlCsGiUIlCsChUohAsCpUoBItCJQrBolDpT2E2PnX5kRWS7IWVXH/yFC2bV2QzF3a3JsbxNk0/Rmthf9sINa3rYi301g4/XQ3/9ayFchn/E9awiqe1sMdddhqWYaeQQgpPGIX2wq0rOs+VfQrtdno7EoUUqlFIoWkUUqiWJCwmi7h1IT/1/eLghJOEZT/32r44aMK0aaoNvrCQ6/kHpqxACyZMXkIZXujtUxiav/EPhScWersUhubPa4MJUyfE9/7JgAn9jYrCUma10YRJk/4bbYMxOKGrFs9xW7HM9El7PKF1FFKoRiGFplFIoVqasBhPomrYMRVOmMmdwgJSBWhCb1vCoLQ7ZtCEcju7wLbwQm+H98CW8MLk7cr8WWEwYfKWc2N0YfJNb/6sN5iwSgS++CcDJpSbSobm/5LCCdNuXVQuFnhCN4++JF6pL6/hCa2jkEI1Cik0jUIK1RKFwyyqhjf94AkfrkfTqHZ7ZVSKJyyS3temEdCEsxSgumU1mDBPAw5KeGHyc3z/hXww4eXP06xThfBzbeNE4Mg/GTDh5c95u6z20PC0E0QTuuHVNNZXahNReML/j67ymKqG9zEDCo2jkEI1Cik0rXPhRP7v3/x+bBF3XQi7iNS+o2v9eC9pwvOKQgrxu3xh82JSQvjW95nGpszV6ZV/fy3IdkfWPDss8Y6K3mo/BOlvPa+k2v4VfpX8Tsk+WgQAncv3fZ9vYMsn/a3gxyqGZ1TrfzGMMcaY1j8Wg5Y5qWfPfAAAAABJRU5ErkJggg==" alt=""></button>
+                <a href="javascript:window.print()"><img src="https://png.pngtree.com/element_our/png_detail/20181227/printer-glyph-black-icon-png_292995.jpg" height="20" width="20"></a>
+    
+                
+                
+                
+            </div>
+        </form>
+
+
+    </div>
+
+</div>

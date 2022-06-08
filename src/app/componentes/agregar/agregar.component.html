@@ -1,0 +1,58 @@
+<div class="card">
+    <div class="card-header">
+        Agregar Pasaje
+    </div><!--Aqui tenemos un formulario normal realizado en html-->
+    <div class="card-body">
+
+        <form [formGroup]="formularioDePasaje" (ngSubmit)="enviarDatos()">
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre Completo:</label>
+                <input type="text" class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId"   placeholder="Escribe tu Nombre">
+            </div>
+           
+            <div class="mb-3">
+                <label for="" class="form-label">Correo:</label>
+                <input type="email" class="form-control" name="" formControlName="correo" id="" aria-describedby="helpId"  placeholder="Escribe tu Correo">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Destino:</label>
+                <input type="" class="form-control"  formControlName="destino" id="emails" list="destino" required size="64"  placeholder="Seleccione tu Destino">
+                <datalist id="destino">
+                  <option >Medellin-Colombia</option>
+                  <option >Barranquilla-Colombia</option>
+                  <option >Bogota-Colombia</option>
+                  <option >Cucuta-Colombia</option>
+                  <option >Cali-Colombia</option>
+                                 
+                </datalist> 
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Hora de Vuelo:</label>
+                <input type="" class="form-control" formControlName="hora"  id="emailss" list="hora" required size="64"  placeholder="seleccione Hora">
+                <datalist id="hora">
+                  <option >9:00</option>
+                  <option >10:00</option>
+                  <option >11:00</option>
+                  <option >12:00</option>
+                  <option >14:00</option>
+                  <option >15:00</option>
+                  <option >16:00</option>
+                  <option >20:00</option>
+                  <option >22:00</option>
+                  <option >23:00</option>                  
+                </datalist> </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Fecha de Vuelo:</label>
+                    <input type="date" class="form-control" name="" formControlName="fecha" id="" aria-describedby="helpId"  placeholder="Ingrese fecha">
+                </div>
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" ><img src="https://cdn-icons-png.flaticon.com/512/51/51862.png" width="20" height="20"></button> 
+                <button type="submit"><img src="https://w7.pngwing.com/pngs/465/487/png-transparent-computer-icons-check-mark-symbol-cancel-button-miscellaneous-angle-internet.png" width="20" height="20"></button>
+                
+            </div>
+        </form>
+
+
+    </div>
+
+</div>

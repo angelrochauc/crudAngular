@@ -1,0 +1,28 @@
+<div class="container p-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card card-body">
+        <img width="180" alt="Angular Logo" src="https://www.viajarafrancia.com/wp-content/uploads/2014/10/clima-1-760x500.jpg" class="mx-auto">
+          <form (submit)="submitLocation(cityName, cityCode)">
+            <input type="text" placeholder="Ciudad" class="form-control" autofocus #cityName>
+            <input type="text" placeholder="Codigo de Pais" class="form-control" #cityCode>
+            <button class="btn btn-primary btn-block mt-2">
+              Ver Clima
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div *ngIf="weather" class="card card-body text-center">
+          <h1 class="h4">Información meteorológica        </h1>
+          <p>Ciudad: {{weather.name}}</p>
+          <p>Latitud: {{weather.coord.lat}}</p>
+          <p>Longitud: {{weather.coord.lon}}</p>
+          <p>Humedad: {{weather.main.humidity}}</p>
+          <p>Presión: {{weather.main.pressure}}</p>
+          <p>Temperatura: {{weather.main.temp}} °C</p>
+          <p>Descripción: {{weather.weather[0].description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
